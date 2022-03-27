@@ -5,10 +5,15 @@ const path = require('path');
 function getMessages(req, res) {
   //__dirname points to the controller folder
   //Also here Express sets our content type based on the extesion of our file name
-  res.sendFile(
+  /* res.sendFile(
     path.join(__dirname, '..', 'public', 'images', 'skimountain.jpg')
-  );
+  ); */
   /* res.send('<ul><li>Hellolu Micky!</li></lu>'); */
+
+  res.render('messages', {
+    title: 'Messages to my friends!',
+    friend: 'Elon Musk',
+  });
 }
 
 function postMessages(req, res) {

@@ -25,7 +25,7 @@ app.use('/site', express.static(path.join(__dirname, 'public')));
 //------built-in middleware to convert req data to json. By default it's an empty array.
 app.use(express.json());
 
-app.use('/', (req, res) => {
+app.get('/', (req, res) => {
   res.render('index.hbs', {
     title: 'My Friends Are Very Clever',
     caption: "Let's go skiing!",
